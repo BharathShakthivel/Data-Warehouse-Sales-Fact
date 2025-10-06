@@ -1,0 +1,796 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/13/2025 3:16:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MRUNAL"
+  DTS:CreatorName="MRUNAL\mrn26"
+  DTS:DTSID="{4E03C73F-5180-4F8A-918B-4C87F7DFEF0C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{6E6A2D3B-97DD-41BA-A6E4-2B9C2EF5448A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{621392DC-4A9F-488B-BFCA-B6B34A0AAC62}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{621392DC-4A9F-488B-BFCA-B6B34A0AAC62}(LocalDb)\MSSQLLocalDB.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2333079F-5840-4F15-A03A-F6CF70EBDE0F}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{2333079F-5840-4F15-A03A-F6CF70EBDE0F}(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DE678A7D-720B-4D55-9B85-6234ACF66A7E}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{DE678A7D-720B-4D55-9B85-6234ACF66A7E}BHARATH\MSSQLSERVER01.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4CFDC8F8-6E7C-4083-833F-D99B46988999}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{4CFDC8F8-6E7C-4083-833F-D99B46988999}BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Exchange_Rates_Dim Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{73A3B502-161B-44CC-B71A-C67523A9C2A8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Exchange_Rates_Dim Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Currency"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Currency]" />
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Exchange]"
+                      cachedDataType="r8"
+                      cachedName="Exchange"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Exchange]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Currency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Currency]"
+                      name="Copy of Currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Currency]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Exchange]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Exchange]"
+                      name="Copy of Exchange"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Exchange]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Exchange_Rates_Dim OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Exchange_Rates]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Currency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                      length="50"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Currency]"
+                      name="Currency"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Exchange]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Exchange]"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Exchange]"
+                      name="Exchange"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                      dataType="wstr"
+                      length="50"
+                      name="Currency" />
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Exchange]"
+                      dataType="r8"
+                      name="Exchange" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                      name="Currency" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Exchange]"
+                      dataType="r8"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Exchange]"
+                      name="Exchange" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Exchange_Rates_Dim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency_date]"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Exchange]"
+                      cachedDataType="r8"
+                      cachedName="Exchange"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exchange]"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Exchange]" />
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Currency"
+                      externalMetadataColumnId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Curency_Code]"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Currency]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Currency_date" />
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exchange]"
+                      dataType="r8"
+                      name="Exchange" />
+                    <externalMetadataColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Curency_Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Curency_Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Exchange_Rates_Dim Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Inputs[Sort Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Inputs[Sort Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Currency"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Currency]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Inputs[Sort Input].Columns[Exchange]"
+                      cachedDataType="r8"
+                      cachedName="Exchange"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Exchange]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Date]"
+                      name="Date"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Currency]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Currency]"
+                      name="Currency">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Currency]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Exchange]"
+                      dataType="r8"
+                      lineageId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output].Columns[Exchange]"
+                      name="Exchange">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output].Columns[Exchange]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Exchange_Rates_Dim Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Exchange_Rates_Dim Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Exchange_Rates_Dim Data Flow Task.Paths[Sort Output]"
+              endId="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Sort Output"
+              startId="Package\Exchange_Rates_Dim Data Flow Task\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="257,42"
+          Id="Package\Exchange_Rates_Dim Data Flow Task"
+          TopLeft="305.499983608723,50.5666663532787" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Exchange_Rates_Dim Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination"
+          TopLeft="434.166642944847,264.333331495192" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source"
+          TopLeft="326.666648818388,37.2666664075189" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Exchange_Rates_Dim Data Flow Task\Sort"
+          TopLeft="333.333315120804,132.599999077916" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Exchange_Rates_Dim Data Flow Task\Data Conversion"
+          TopLeft="481.666640349561,170.733332290716" />
+        <EdgeLayout
+          Id="Package\Exchange_Rates_Dim Data Flow Task.Paths[Sort Output]"
+          TopLeft="430.933315120804,153.399999077916">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.7333252287575,38.1333332127996"
+              Start="0,0"
+              End="43.2333252287575,38.1333332127996">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.3666626143788,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.3666626143788,0"
+                    Point2="25.3666626143788,0"
+                    Point3="25.3666626143788,4" />
+                  <mssgle:LineSegment
+                    End="25.3666626143788,34.1333332127996" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3666626143788,34.1333332127996"
+                    Point2="25.3666626143788,38.1333332127996"
+                    Point3="29.3666626143788,38.1333332127996" />
+                  <mssgle:LineSegment
+                    End="43.2333252287575,38.1333332127996" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Exchange_Rates_Dim Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="455.866648818388,78.8666664075189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-73.7333336975839,53.7333326703972"
+              Start="0,0"
+              End="-73.7333336975839,46.2333326703972">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8666663351986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8666663351986"
+                    Point2="0,26.8666663351986"
+                    Point3="-4,26.8666663351986" />
+                  <mssgle:LineSegment
+                    End="-69.7333336975839,26.8666663351986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-69.7333336975839,26.8666663351986"
+                    Point2="-73.7333336975839,26.8666663351986"
+                    Point3="-73.7333336975839,30.8666663351986" />
+                  <mssgle:LineSegment
+                    End="-73.7333336975839,46.2333326703972" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Exchange_Rates_Dim Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="559.666640349561,212.333332290716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39.8999974047143,51.9999992044766"
+              Start="0,0"
+              End="-39.8999974047143,44.4999992044766">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.9999996022383" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.9999996022383"
+                    Point2="0,25.9999996022383"
+                    Point3="-4,25.9999996022383" />
+                  <mssgle:LineSegment
+                    End="-35.8999974047143,25.9999996022383" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.8999974047143,25.9999996022383"
+                    Point2="-39.8999974047143,25.9999996022383"
+                    Point3="-39.8999974047143,29.9999996022383" />
+                  <mssgle:LineSegment
+                    End="-39.8999974047143,44.4999992044766" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Exchange_Rates_Dim Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Exchange_Rates_Dim Data Flow Task\Exchange_Rates_Dim OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

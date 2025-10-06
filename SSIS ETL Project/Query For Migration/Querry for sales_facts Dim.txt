@@ -1,0 +1,37 @@
+Querry for sales_facts Dim
+
+
+WITH OrderProducts AS (
+    SELECT
+        sl.Order_Number,
+        sl.ProductKey,
+        ROUND((er.Unit_Price_USD * sl.Quantity), 2) AS Total_Amount_product,
+        sl.StoreKey,
+        sl.Order_Date,
+        sl.CustomerKey,
+        sl.Quantity,
+        -- Assign row number per order, ordered by ProductKey
+        ROW_NUMBER() OVER (
+            PARTITION BY sl.Order_Number 
+            ORDER BY sl.ProductKey
+        ) AS rn
+    FROM Products er 
+    INNER JOIN sales sl ON er.ProductKey = sl.ProductKey
+)
+SELECT
+    Order_Number,
+   cast( ProductKey as int)AS  First_ProductKey,
+    Total_Amount_product,
+    StoreKey,
+    Order_Date,
+    CustomerKey,
+    Quantity
+FROM OrderProducts
+WHERE rn = 1;
+
+
+
+
+____________________________________________________________________________________________
+
+

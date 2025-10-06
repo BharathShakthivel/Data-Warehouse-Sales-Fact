@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/4/2025 8:28:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MRUNAL"
+  DTS:CreatorName="MRUNAL\mrn26"
+  DTS:DTSID="{3A160C63-CB2C-43A1-8FBC-AAE2F313C185}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Customer_dim"
+  DTS:PackageType="5"
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{187A2F1D-C41B-45FF-9546-1ECAAF38E290}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{019FE754-E588-4031-8150-4C5FBA0961A0}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{019FE754-E588-4031-8150-4C5FBA0961A0}(LocalDb)\MSSQLLocalDB.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1CDC615E-CC08-498D-B7B0-CB2BB5FD74BA}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{1CDC615E-CC08-498D-B7B0-CB2BB5FD74BA}(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.Sales_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B89DDC64-39C6-4229-9627-4E38692B1BE7}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.Sales_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Sales_DW;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{B89DDC64-39C6-4229-9627-4E38692B1BE7}(LocalDb)\MSSQLLocalDB.Sales_DW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5BCCCAD-F826-4415-8938-B6FC7FC16185}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=TestAdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{C5BCCCAD-F826-4415-8938-B6FC7FC16185}(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{96E6923F-9F6C-41D1-AEC6-8A0F15BD9F71}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{96E6923F-9F6C-41D1-AEC6-8A0F15BD9F71}BHARATH\MSSQLSERVER01.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{51C40EBA-81BB-46E9-8401-707CB0A86107}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer_dim-{51C40EBA-81BB-46E9-8401-707CB0A86107}BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Customer_dim_Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3B7C8CA3-EA22-4435-A413-34BDB441B5CD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Customer_dim_Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Customer_dim_OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers_dim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CustomerKey"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerKey]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Gender"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Name"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Name]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of City"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of State_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of State_Code"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State_Code]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of State]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of State"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Zip_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Zip_Code"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Zip_Code]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Zip_Code]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Country"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Continent]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Continent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Continent]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Birthday]"
+                      cachedDataType="date"
+                      cachedName="Copy of Birthday"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birthday]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="10"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="100"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State_Code]"
+                      dataType="wstr"
+                      length="10"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="100"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Zip_Code]"
+                      dataType="wstr"
+                      length="20"
+                      name="Zip_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="100"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      dataType="wstr"
+                      length="50"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Birthday]"
+                      dataType="dbDate"
+                      name="Birthday" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Customer_dim_OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      name="CustomerKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State_Code]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State_Code]"
+                      name="State_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Zip_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Zip_Code]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Zip_Code]"
+                      name="Zip_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Continent]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Continent]"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Birthday]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Birthday]"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Birthday]"
+                      name="Birthday"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State_Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="State_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="50"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Zip_Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Zip_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Continent]"
+                      dataType="wstr"
+                      length="50"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Birthday]"
+                      dataType="dbDate"
+                      name="Birthday" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      name="CustomerKey" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State_Code]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State_Code]"
+                      name="State_Code" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Zip_Code]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Zip_Code]"
+                      name="Zip_Code" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Continent]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Continent]"
+                      name="Continent" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Birthday]"
+                      dataType="dbDate"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Birthday]"
+                      name="Birthday" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Customer_dim_Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Gender"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[State_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="State_Code"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State_Code]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="State"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Zip_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Zip_Code"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Zip_Code]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Continent]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Continent"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Continent]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Birthday]"
+                      cachedDataType="dbDate"
+                      cachedName="Birthday"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Birthday]" />
+                    <inputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CustomerKey"
+                      lineageId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                      name="Copy of Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Name]"
+                      name="Copy of Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      name="Copy of City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State_Code]"
+                      name="Copy of State_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State_Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]"
+                      name="Copy of State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Zip_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Zip_Code]"
+                      name="Copy of Zip_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Zip_Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      name="Copy of Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Continent]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Continent]"
+                      name="Copy of Continent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Continent]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birthday]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Birthday]"
+                      name="Copy of Birthday"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[Birthday]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerKey]"
+                      name="Copy of CustomerKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerKey]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Customer_dim_Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Customer_dim_Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Customer_dim_Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Customer_dim_Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Customer_dim_Data Flow Task"
+          TopLeft="221.666654555335,87.5333327246375" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Customer_dim_Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="226,42"
+          Id="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source"
+          TopLeft="232.499987296761,42.4666663713587" />
+        <NodeLayout
+          Size="255,42"
+          Id="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination"
+          TopLeft="278.333318125871,298.933331260151" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Customer_dim_Data Flow Task\Data Conversion"
+          TopLeft="419.999977052213,224.333331929114" />
+        <EdgeLayout
+          Id="Package\Customer_dim_Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="345.299987296761,84.0666663713587">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.699989755452,140.266665557755"
+              Start="0,0"
+              End="152.699989755452,132.766665557755">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.1333327788776" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66.1333327788776"
+                    Point2="0,70.1333327788776"
+                    Point3="4,70.1333327788776" />
+                  <mssgle:LineSegment
+                    End="148.699989755452,70.1333327788776" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.699989755452,70.1333327788776"
+                    Point2="152.699989755452,70.1333327788776"
+                    Point3="152.699989755452,74.1333327788776" />
+                  <mssgle:LineSegment
+                    End="152.699989755452,132.766665557755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer_dim_Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="497.999977052213,266.333331929114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-92.166658926342,32.599999331037"
+              Start="0,0"
+              End="-92.166658926342,25.099999331037">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.2999996655185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.2999996655185"
+                    Point2="0,16.2999996655185"
+                    Point3="-4,16.2999996655185" />
+                  <mssgle:LineSegment
+                    End="-88.166658926342,16.2999996655185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88.166658926342,16.2999996655185"
+                    Point2="-92.166658926342,16.2999996655185"
+                    Point3="-92.166658926342,20.2999996655185" />
+                  <mssgle:LineSegment
+                    End="-92.166658926342,25.099999331037" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_dim_Data Flow Task\Customer_dim_OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

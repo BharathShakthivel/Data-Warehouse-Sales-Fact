@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report5.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|solutionrelative:Report5.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report4.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|solutionrelative:Report4.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|solutionrelative:Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|solutionrelative:Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{932B9EE9-EEF9-4400-B8E2-875939E281F6}|global_electronics_retailer.rptproj|solutionrelative:Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Report1.rdl [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report1.rdl",
+              "RelativeDocumentMoniker": "Report1.rdl",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report1.rdl [Design]",
+              "RelativeToolTip": "Report1.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T11:11:01.684Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Report2.rdl [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report2.rdl",
+              "RelativeDocumentMoniker": "Report2.rdl",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report2.rdl [Design]",
+              "RelativeToolTip": "Report2.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T11:11:01.712Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Report3.rdl [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report3.rdl",
+              "RelativeDocumentMoniker": "Report3.rdl",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report3.rdl [Design]",
+              "RelativeToolTip": "Report3.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T11:11:01.714Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Report4.rdl [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report4.rdl",
+              "RelativeDocumentMoniker": "Report4.rdl",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report4.rdl [Design]",
+              "RelativeToolTip": "Report4.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T11:11:01.715Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report5.rdl [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report5.rdl",
+              "RelativeDocumentMoniker": "Report5.rdl",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSRS Reports\\global_electronics_retailer\\global_electronics_retailer\\Report5.rdl [Design]",
+              "RelativeToolTip": "Report5.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T11:11:03.456Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

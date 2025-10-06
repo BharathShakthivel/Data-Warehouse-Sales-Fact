@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Sales_Fact.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Sales_Fact.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Customer_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Customer_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Products_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Products_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Exchange_Rates_Dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Exchange_Rates_Dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Store_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Store_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Date_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8180FB97-B552-4CC2-9CA4-AB21325B6F72}|DataStorage_shcma\\DataStorage_shcma.dtproj|solutionrelative:DataStorage_shcma\\Date_dim.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Products_dim.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Products_dim.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Products_dim.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Products_dim.dtsx [Design]",
+              "RelativeToolTip": "..\\..\\..\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Products_dim.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-12T21:39:43.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Store_dim.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Store_dim.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Store_dim.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Store_dim.dtsx [Design]",
+              "RelativeToolTip": "..\\..\\..\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Store_dim.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-04T11:06:36.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sales_Fact.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Sales_Fact.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Sales_Fact.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Sales_Fact.dtsx [Design]",
+              "RelativeToolTip": "DataStorage_shcma\\Sales_Fact.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-12T22:10:43.842Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer_dim.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Customer_dim.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Customer_dim.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Customer_dim.dtsx [Design]",
+              "RelativeToolTip": "..\\..\\..\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Customer_dim.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-04T14:58:02.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Exchange_Rates_Dim.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Exchange_Rates_Dim.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Exchange_Rates_Dim.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Exchange_Rates_Dim.dtsx [Design]",
+              "RelativeToolTip": "..\\..\\..\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Exchange_Rates_Dim.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-12T21:46:14.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Date_dim.dtsx [Design]",
+              "DocumentMoniker": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\SSIS ETL Project\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Date_dim.dtsx",
+              "RelativeDocumentMoniker": "DataStorage_shcma\\Date_dim.dtsx",
+              "ToolTip": "E:\\Desktop files\\DBS - Msc. in Data Analytics\\Data Storage Solutions\\CA - 1\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Date_dim.dtsx [Design]",
+              "RelativeToolTip": "..\\..\\..\\Data Source\\Data Warehouse\\DataStorage_shcma\\DataStorage_shcma\\DataStorage_shcma\\Date_dim.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-07-04T15:22:44.586Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

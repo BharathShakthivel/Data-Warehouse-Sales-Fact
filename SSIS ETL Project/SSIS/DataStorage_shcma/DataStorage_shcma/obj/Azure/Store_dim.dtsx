@@ -1,0 +1,779 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/4/2025 4:36:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MRUNAL"
+  DTS:CreatorName="MRUNAL\mrn26"
+  DTS:DTSID="{6791D289-D345-4DB7-B011-310E98526AFD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Store_dim"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{C1272C41-BC46-44E6-A800-533FDB06E498}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1F2DB75F-475D-42A4-A316-8AEF69F1732E}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Store_dim-{1F2DB75F-475D-42A4-A316-8AEF69F1732E}(LocalDb)\MSSQLLocalDB.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{84719B9B-BECB-4974-A985-B072DDBD45AB}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Store_dim-{84719B9B-BECB-4974-A985-B072DDBD45AB}(LocalDb)\MSSQLLocalDB.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6CD155B2-EDEA-47F7-8F32-A0C9CCB9DC6A}"
+      DTS:ObjectName="(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=TestAdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Store_dim-{6CD155B2-EDEA-47F7-8F32-A0C9CCB9DC6A}(LocalDb)\MSSQLLocalDB.TestAdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{372181B5-D027-4168-ABDB-A0B643F9C8F4}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Store_dim-{372181B5-D027-4168-ABDB-A0B643F9C8F4}BHARATH\MSSQLSERVER01.AdvanceNetworking;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{39F914BB-0029-4BE7-8747-5A73A545EF80}"
+      DTS:ObjectName="BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BHARATH\MSSQLSERVER01;Initial Catalog=AdvanceNetworkingWarehouse;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Store_dim-{39F914BB-0029-4BE7-8747-5A73A545EF80}BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Store_Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{76C6CC59-07C7-4CB8-B0C3-2030C0A4A3E8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Store_Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Store_Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stores_Dim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Store_Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworkingWarehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StoreKey]"
+                      cachedDataType="i4"
+                      cachedName="StoreKey"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreKey]"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[StoreKey]" />
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Square_Meters]"
+                      cachedDataType="i4"
+                      cachedName="Square_Meters"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Square_Meters]"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Square_Meters]" />
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Open_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Open_Date"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Open_Date]"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Open_Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreKey]"
+                      dataType="i4"
+                      name="StoreKey" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="50"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Square_Meters]"
+                      dataType="wstr"
+                      length="50"
+                      name="Square_Meters" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Open_Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Open_Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Store_Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Store_Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input].Columns[StoreKey]"
+                      cachedDataType="i4"
+                      cachedName="StoreKey"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[StoreKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="State"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input].Columns[Square_Meters]"
+                      cachedDataType="i4"
+                      cachedName="Square_Meters"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Square_Meters]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input].Columns[Open_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Open_Date"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Open_Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[StoreKey]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[StoreKey]"
+                      name="StoreKey"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[StoreKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Country]"
+                      name="Country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[State]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[State]"
+                      name="State">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Square_Meters]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Square_Meters]"
+                      name="Square_Meters">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Square_Meters]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Open_Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output].Columns[Open_Date]"
+                      name="Open_Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Open_Date]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Store_Data Flow Task\Store_OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Store_OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stores]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Store_Data Flow Task\Store_OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  connectionManagerRefId="Package.ConnectionManagers[BHARATH\MSSQLSERVER01.AdvanceNetworking]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[StoreKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StoreKey]"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[StoreKey]"
+                      name="StoreKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Square_Meters]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Square_Meters]"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Square_Meters]"
+                      name="Square_Meters"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Open_Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Open_Date]"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].Columns[Open_Date]"
+                      name="Open_Date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StoreKey]"
+                      dataType="i4"
+                      name="StoreKey" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="50"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Square_Meters]"
+                      dataType="i4"
+                      name="Square_Meters" />
+                    <externalMetadataColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Open_Date]"
+                      dataType="dbDate"
+                      name="Open_Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StoreKey]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StoreKey]"
+                      name="StoreKey" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Square_Meters]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Square_Meters]"
+                      name="Square_Meters" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Open_Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Open_Date]"
+                      name="Open_Date" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Store_Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Store_Data Flow Task\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Store_Data Flow Task\Store_OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Store_Data Flow Task.Paths[Sort Output]"
+              endId="Package\Store_Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Store_Data Flow Task\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Store_Data Flow Task"
+          TopLeft="209.166655238304,116.133332525757" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Store_Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Store_Data Flow Task\Store_OLE DB Source"
+          TopLeft="244.999986613791,79.7333327788777" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Store_Data Flow Task\Sort"
+          TopLeft="347.499981013438,168.399999023676" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Store_Data Flow Task\OLE DB Destination"
+          TopLeft="323.33331566718,305.933331205911" />
+        <EdgeLayout
+          Id="Package\Store_Data Flow Task.Paths[Sort Output]"
+          TopLeft="396.299981013438,209.999999023676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.6333346537421,95.933332182235"
+              Start="0,0"
+              End="12.6333346537421,88.433332182235">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.9666660911175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.9666660911175"
+                    Point2="0,47.9666660911175"
+                    Point3="4,47.9666660911175" />
+                  <mssgle:LineSegment
+                    End="8.63333465374205,47.9666660911175" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.63333465374205,47.9666660911175"
+                    Point2="12.6333346537421,47.9666660911175"
+                    Point3="12.6333346537421,51.9666660911175" />
+                  <mssgle:LineSegment
+                    End="12.6333346537421,88.433332182235" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Store_Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="336.199986613791,121.333332778878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.0999943996469,47.0666662447983"
+              Start="0,0"
+              End="60.0999943996469,39.5666662447983">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5333331223991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5333331223991"
+                    Point2="0,23.5333331223991"
+                    Point3="4,23.5333331223991" />
+                  <mssgle:LineSegment
+                    End="56.0999943996469,23.5333331223991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.0999943996469,23.5333331223991"
+                    Point2="60.0999943996469,23.5333331223991"
+                    Point3="60.0999943996469,27.5333331223991" />
+                  <mssgle:LineSegment
+                    End="60.0999943996469,39.5666662447983" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Store_Data Flow Task\Store_OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Store_Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
